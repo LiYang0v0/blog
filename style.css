@@ -58,7 +58,7 @@ a:focus {
 
 .site-title {
   margin: 0;
-  font-size: clamp(2.4rem, 6vw, 4.25rem);
+  font-size: clamp(2.2rem, 5vw, 3.55rem);
   line-height: 1.1;
   font-weight: 800;
   letter-spacing: 0;
