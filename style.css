@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Noto+Sans+SC:wght@400;500&family=Noto+Serif:wght@400;500;700&family=Noto+Serif+SC:wght@400;500;700&display=swap");
 
 :root {
   --background: #f5f2ee;
-  --text: #252525;
-  --muted: #665f59;
+  --article: #ffffff;
+  --text: #5f6d80;
+  --muted: #5c727a;
   --accent: #cb2e5a;
   --accent-dark: #460a1b;
-  --rule: #e2d9d1;
-  --nav-bg: #fffaf6;
+  --rule: #f1f2f3;
+  --nav-bg: rgba(225, 107, 140, 0.75);
+  --nav-hover: #460a1b;
 }
 
 * {
@@ -18,9 +20,9 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: "Noto Sans", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 1.75;
+  font-family: "Noto Serif", "Noto Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 a {
@@ -35,32 +37,30 @@ a:focus {
 }
 
 .site-header {
-  border-top: 12px solid var(--accent-dark);
-  border-bottom: 1px solid var(--rule);
-  background: var(--nav-bg);
+  background: #ffffff;
+  padding-top: 1.5em;
+  position: relative;
+  text-align: center;
 }
 
 .site-branding,
-.main-navigation,
 .site-main,
 .site-footer {
-  max-width: 760px;
   margin: 0 auto;
-  padding-right: 24px;
-  padding-left: 24px;
 }
 
 .site-branding {
-  padding-top: 44px;
-  padding-bottom: 30px;
+  max-width: 1200px;
+  padding: 0 24px 1.5em;
   text-align: center;
 }
 
 .site-title {
   margin: 0;
-  font-size: clamp(2rem, 4.4vw, 3.1rem);
-  line-height: 1.1;
-  font-weight: 800;
+  font-family: "Noto Sans", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", Arial, sans-serif;
+  font-size: clamp(2.25rem, 6vw, 4.6rem);
+  font-weight: 400;
+  line-height: 1.25;
   letter-spacing: 0;
 }
 
@@ -74,82 +74,115 @@ a:focus {
 }
 
 .site-description {
-  margin: 14px 0 0;
+  margin: 0;
+  padding-bottom: 1.5em;
   color: var(--accent-dark);
   font-size: 1rem;
+  font-weight: 400;
 }
 
 .language-tools {
-  margin-top: 18px;
+  margin-top: 0;
 }
 
 .language-toggle {
-  min-width: 84px;
-  padding: 7px 13px;
-  border: 1px solid var(--accent);
+  min-width: 76px;
+  padding: 0.55em 1em;
+  border: 0;
   border-radius: 3px;
-  background: transparent;
-  color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
   font: inherit;
-  font-size: 0.86rem;
-  line-height: 1.2;
+  font-size: 0.8125rem;
+  line-height: 1;
   cursor: pointer;
 }
 
 .language-toggle:hover,
 .language-toggle:focus {
-  border-color: var(--accent-dark);
-  color: var(--accent-dark);
+  background: #e4809c;
+  color: #ffffff;
 }
 
 .main-navigation {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2px;
-  padding-bottom: 18px;
+  gap: 1.5em;
+  width: 100%;
+  padding: 0.75em 24px;
+  background: var(--nav-bg);
+  text-align: center;
 }
 
 .main-navigation a {
-  padding: 8px 13px;
-  border-bottom: 3px solid transparent;
-  color: var(--accent);
-  font-size: 0.92rem;
+  padding: 0.375em 0;
+  border-bottom: 0;
+  color: #202231;
+  font-family: "Noto Sans", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", Arial, sans-serif;
+  font-size: 1rem;
 }
 
 .main-navigation a:hover,
 .main-navigation a:focus,
 .main-navigation a[aria-current="page"] {
-  border-bottom-color: var(--accent);
-  color: var(--accent-dark);
+  color: var(--nav-hover);
   text-decoration: none;
 }
 
 .site-main {
-  padding-top: 44px;
-  padding-bottom: 28px;
+  width: 100%;
+  padding: 1.5em 0 0;
 }
 
-.post-card,
 .post,
 .page-content {
-  margin-bottom: 52px;
+  margin-bottom: 1.5em;
 }
 
-.entry-date {
-  margin: 0 0 6px;
+.post,
+.page-content {
+  background: var(--article);
+  border-bottom: 2px solid var(--rule);
+  padding: 3em 1.5em;
+  text-align: center;
+}
+
+.entry-header,
+.entry-content,
+.entry-summary,
+.entry-meta,
+.page-content > * {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.entry-meta {
+  margin-top: 0.375em;
+  margin-bottom: 0.375em;
   color: var(--muted);
-  font-size: 0.86rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.entry-meta a,
+.entry-meta a:visited {
+  color: var(--accent);
 }
 
 .entry-title {
-  margin: 0 0 14px;
-  font-size: 1.7rem;
+  margin: 0;
+  color: var(--accent);
+  font-family: "Noto Sans", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", Arial, sans-serif;
+  font-size: clamp(2rem, 5vw, 2.625rem);
+  font-weight: 400;
   line-height: 1.35;
+  text-align: center;
 }
 
 .entry-title a {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .entry-title a:hover,
@@ -160,13 +193,18 @@ a:focus {
 .entry-summary p,
 .entry-content p,
 .page-content p {
-  margin: 0 0 1.25em;
+  margin: 0 0 1.5em;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 400;
   text-align: left;
 }
 
-.read-more {
-  margin-top: 18px;
-  font-size: 0.94rem;
+.entry-content,
+.entry-summary {
+  margin-top: 1.5em;
+  padding-bottom: 1.5em;
+  text-align: left;
 }
 
 .archive-list {
@@ -193,28 +231,38 @@ a:focus {
 }
 
 .site-footer {
-  padding-top: 12px;
-  padding-bottom: 42px;
-  color: var(--muted);
-  font-size: 0.9rem;
+  width: 100%;
+  padding: 1.5em;
+  background: #2e3c41;
+  color: #cfd5d7;
+  font-size: 0.8125rem;
   text-align: center;
 }
 
 @media (max-width: 560px) {
   body {
-    font-size: 17px;
+    font-size: 16px;
   }
 
-  .site-branding,
-  .main-navigation,
-  .site-main,
-  .site-footer {
+  .site-branding {
     padding-right: 18px;
     padding-left: 18px;
   }
 
-  .site-branding {
-    padding-top: 34px;
+  .main-navigation {
+    gap: 1em;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .post,
+  .page-content {
+    padding-right: 1.125em;
+    padding-left: 1.125em;
+  }
+
+  .entry-meta {
+    font-size: 1rem;
   }
 
   .archive-list li {
