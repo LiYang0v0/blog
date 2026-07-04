@@ -4,4 +4,4 @@
 
 发布地址：
 
-https://LiYang0v0.github.io/blog/
+https://LiYang0v0.github.io/wordblog/
