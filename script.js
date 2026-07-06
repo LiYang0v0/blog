@@ -14,7 +14,7 @@
   function setLanguage(lang) {
     var next = lang === "en" ? "en" : "zh";
     root.dataset.lang = next;
-    root.lang = next === "en" ? "en" : "zh-Hans";
+    root.lang = next === "en" ? "en" : "zh-Hant";
 
     document.querySelectorAll("[data-lang]").forEach(function (node) {
       node.hidden = node.getAttribute("data-lang") !== next;
@@ -26,7 +26,7 @@
 
     if (toggle) {
       toggle.textContent = next === "en" ? "中文" : "English";
-      toggle.setAttribute("aria-label", next === "en" ? "切换到中文" : "Switch to English");
+      toggle.setAttribute("aria-label", next === "en" ? "切換到中文" : "Switch to English");
     }
 
     window.localStorage.setItem(storageKey, next);

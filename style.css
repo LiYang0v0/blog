@@ -200,6 +200,12 @@ a:focus {
   text-align: left;
 }
 
+.page-subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+  text-align: center !important;
+}
+
 .entry-content,
 .entry-summary {
   margin-top: 1.5em;
