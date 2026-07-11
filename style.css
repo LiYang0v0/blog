@@ -202,9 +202,51 @@ a:focus {
 }
 
 .page-subtitle {
+  margin-bottom: 3.5em !important;
   color: var(--muted);
   font-size: 0.92rem;
   text-align: center !important;
+}
+
+.sayable-list {
+  max-width: 880px;
+  margin-top: 0;
+  text-align: left;
+}
+
+.sayable-item {
+  padding: 0 0 3.25em;
+  margin: 0 0 3.25em;
+  border-bottom: 1px solid var(--rule);
+}
+
+.sayable-item:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.sayable-title {
+  margin: 0 0 1.1em;
+  color: var(--muted);
+  font-family: "Noto Sans", "PingFang SC", Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.sayable-item blockquote {
+  margin: 0;
+}
+
+.sayable-item blockquote p {
+  margin-bottom: 1.2em;
+}
+
+.sayable-source {
+  color: var(--muted);
+  font-size: 0.9rem !important;
+  text-align: left !important;
 }
 
 .entry-content,
