@@ -5,11 +5,11 @@
   --article: #ffffff;
   --text: #5f6d80;
   --muted: #5c727a;
-  --accent: #cb2e5a;
-  --accent-dark: #460a1b;
+  --accent: #2f8f83;
+  --accent-dark: #163f45;
   --rule: #f1f2f3;
-  --nav-bg: rgba(225, 107, 140, 0.75);
-  --nav-hover: #460a1b;
+  --nav-bg: rgba(120, 177, 164, 0.78);
+  --nav-hover: #163f45;
 }
 
 * {
@@ -100,7 +100,7 @@ a:focus {
 
 .language-toggle:hover,
 .language-toggle:focus {
-  background: #e4809c;
+  background: #3fa99b;
   color: #ffffff;
 }
 
@@ -282,7 +282,7 @@ a:focus {
 .site-footer {
   width: 100%;
   padding: 1.5em;
-  background: #2e3c41;
+  background: #203b40;
   color: #cfd5d7;
   font-size: 0.8125rem;
   text-align: center;
